@@ -6,6 +6,14 @@ import Category from '../img/category.svg'
 import './PickCategory.css'
 
 const PickCategory = () => {
+    const [quizState, dispatch] = useContext(QuizContext)
+
+    const chooseCategoryAndReorderTheQuestions = (category) => {
+        dispatch({type: 'START_GAME', payload: category})
+
+        dispatch({type: 'REORDER_QUESTIONS'})
+    }
+
   return (
     <div id="category">
         <h2>Escolha uma categoria</h2>
@@ -13,7 +21,9 @@ const PickCategory = () => {
         <p>As perguntas serão referentes a uma das linguagens abaixo:</p>
 
         <div>
-            <button>CSS</button>
+            {quizState.questions.map((question) => (
+                <button onClick={() => chooseCategoryAndReorderTheQuestions(question.category)} key={question.category}>{question.category}</button>
+            ))}
         </div>
 
         <img src={Category} alt="Categorias do quiz" />
