@@ -3,7 +3,7 @@ import { createContext, useReducer } from "react";
 import questions from '../data/questions_complete'
 
 
-const STAGES = ['Start', 'Playing', 'End']
+const STAGES = ['Start', 'Category', 'Playing', 'End']
 
 
 const initialState = {
