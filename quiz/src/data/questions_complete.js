@@ -50,6 +50,16 @@ const data = [
         options: ["static", "absolute", "fixed", "relative"],
         answer: "fixed",
       },
+      {
+        question: "O código para cores com 6 díditos é:",
+        options: ["rgb", "hexadecimal", "true-colors"],
+        answer: "hexadecimal",
+      },
+      {
+        question: "Até quantos lados de um elemento pode-se alterar a margem? ",
+        options: ["2", "4", "6", "8"],
+        answer: "4",
+      },
     ],
   },
   {
